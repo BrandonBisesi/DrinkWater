@@ -5,8 +5,6 @@
              Title="InfoView">
     <VerticalStackLayout>
         <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            Text="Welcome to .NET MAUI!"/>
     </VerticalStackLayout>
 </ContentPage>

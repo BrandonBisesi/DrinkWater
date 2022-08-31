@@ -1,12 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using DrinkWater.Views;
+using CommunityToolkit.Mvvm.Input;
+using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace DrinkWater.ViewModels
 {
-    internal class MainViewModel
+    public partial class MainViewModel : ObservableObject
     {
+        [RelayCommand]
+        async Task Info()
+        {
+            await Shell.Current.GoToAsync(nameof(InfoView));
+        }
+
+        [RelayCommand]
+        async Task History()
+        {
+            await Shell.Current.GoToAsync(nameof(HistoryView));
+        }
     }
 }

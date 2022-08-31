@@ -21,12 +21,6 @@ build_metadata.AdditionalFiles.ManifestResourceName = DrinkWater.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-[C:/Users/Brandon/MauiTests/DrinkWater/DrinkWater/MainPage.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = DrinkWater.MainPage.xaml
-build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
-build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
-
 [C:/Users/Brandon/MauiTests/DrinkWater/DrinkWater/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = DrinkWater.Resources.Styles.Colors.xaml
@@ -38,3 +32,21 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = DrinkWater.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/Users/Brandon/MauiTests/DrinkWater/DrinkWater/Views/HistoryView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = DrinkWater.Views.HistoryView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\HistoryView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\HistoryView.xaml
+
+[C:/Users/Brandon/MauiTests/DrinkWater/DrinkWater/Views/InfoView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = DrinkWater.Views.InfoView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\InfoView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\InfoView.xaml
+
+[C:/Users/Brandon/MauiTests/DrinkWater/DrinkWater/Views/MainView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = DrinkWater.Views.MainView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\MainView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\MainView.xaml
