@@ -1,15 +1,14 @@
 ﻿using DrinkWater.Views;
 using CommunityToolkit.Mvvm.Input;
-using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace DrinkWater.ViewModels
 {
-    public partial class MainViewModel : ObservableObject
+    public partial class MainViewModel : BindableObject
     {
         [RelayCommand]
         async Task Info()
         {
-            await Shell.Current.GoToAsync(nameof(InfoView));
+            await Shell.Current.GoToAsync(nameof(UserView));
         }
 
         [RelayCommand]
@@ -17,5 +16,6 @@ namespace DrinkWater.ViewModels
         {
             await Shell.Current.GoToAsync(nameof(HistoryView));
         }
+
     }
 }
