@@ -10,5 +10,6 @@ public partial class AppShell : Shell
 
         Routing.RegisterRoute(nameof(HistoryView), typeof(HistoryView));
         Routing.RegisterRoute(nameof(UserView), typeof(UserView));
+        Routing.RegisterRoute(nameof(WaterIntakeView), typeof(WaterIntakeView));
     }
 }

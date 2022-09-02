@@ -17,5 +17,11 @@ namespace DrinkWater.ViewModels
             await Shell.Current.GoToAsync(nameof(HistoryView));
         }
 
+        [RelayCommand]
+        async Task WaterIntake()
+        {
+            await Shell.Current.GoToAsync(nameof(WaterIntakeView));
+        }
+
     }
 }

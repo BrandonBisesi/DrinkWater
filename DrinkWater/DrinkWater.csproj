@@ -15,7 +15,7 @@
 		<ApplicationTitle>DrinkWater</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>com.companyname.drinkwater</ApplicationId>
+		<ApplicationId>drinkwater</ApplicationId>
 		<ApplicationIdGuid>8C94F5D8-5D41-4813-A5CF-BF59BDD70832</ApplicationIdGuid>
 
 		<!-- Versions -->
@@ -50,6 +50,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <PackageReference Include="CommunityToolkit.Maui" Version="1.2.0" />
+	  <PackageReference Include="CommunityToolkit.Maui.Markup" Version="1.0.1" />
 	  <PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0" />
 	  <PackageReference Include="ReactiveUI.Maui" Version="18.3.1" />
 	  <PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
@@ -69,6 +71,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\MainView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\WaterIntakeView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

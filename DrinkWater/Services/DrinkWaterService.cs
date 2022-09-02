@@ -16,8 +16,10 @@ namespace DrinkWater.Services
             db = new SQLiteConnection(databasePath);
 
             db.CreateTable<User>();
+            db.CreateTable<WaterIntake>();
         }
 
+        #region User Functions
         public static User AddUser(string name, string weight, string age)
         {
             Init();
@@ -49,5 +51,19 @@ namespace DrinkWater.Services
             var user = db.Table<User>().First();
             return user;
         }
+        #endregion
+
+        #region WaterIntake Functions
+
+        public static int AddWater(int intake)
+        {
+            Init();
+            var waterIntake = new WaterIntake(intake);
+
+            db.Insert(waterIntake);
+            return waterIntake.Id;
+        }
+
+        #endregion
     }
 }

@@ -11,5 +11,9 @@
                 Command="{Binding InfoCommand}"/>
         <Button Text="History"
                 Command="{Binding HistoryCommand}"/>
+        <ProgressBar Progress="{Binding .}"/>
+
+        <Button Text="Drink Water"
+                Command="{Binding WaterIntakeCommand}"/>
     </VerticalStackLayout>
 </ContentPage>
