@@ -38,6 +38,7 @@ namespace DrinkWater.Services
             user.Name = name;
             user.Weight = weight;
             user.Age = age;
+            user.RecommendedWaterIntake = user.CalculateRecommendedWaterIntake();
 
             db.Update(user);
         }
