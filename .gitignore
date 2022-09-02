@@ -377,3 +377,4 @@ local.properties
 Directory.Build.Override.props
 
 bin/
+obj/
