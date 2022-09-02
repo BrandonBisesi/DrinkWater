@@ -9,6 +9,6 @@ public partial class AppShell : Shell
 		InitializeComponent();
 
         Routing.RegisterRoute(nameof(HistoryView), typeof(HistoryView));
-        Routing.RegisterRoute(nameof(InfoView), typeof(InfoView));
+        Routing.RegisterRoute(nameof(UserView), typeof(UserView));
     }
 }

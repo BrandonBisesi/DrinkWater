@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DrinkWater.Views.UserView"
+             xmlns:viewmodel="clr-namespace:DrinkWater.ViewModels"
+             x:DataType="viewmodel:UserViewModel"
+             Title="My Info">
+
+    <VerticalStackLayout>
+        <Grid RowDefinitions="100, Auto, 50"
+          ColumnDefinitions=".5*, .5*"
+          Padding="10"
+          RowSpacing="10"
+          ColumnSpacing="10">
+
+
+            <Label Text="Name:"
+                   Grid.Row="1"/>
+            <Label Text='{Binding User.Name}'
+                   Grid.Row="1"
+                   Grid.Column="1"/>
+
+            <Label Text="Body Weight (lbs):"
+               Grid.Row="2"/>
+            <Label Text='{Binding User.Weight}'
+               Grid.Column="1"
+               Grid.Row="2"/>
+        </Grid>
+        <Grid RowDefinitions="100, Auto, 50"
+                ColumnDefinitions=".5*, .5*"
+                Padding="10"
+                RowSpacing="10"
+                ColumnSpacing="10">
+            <Label Text="Age:"
+               Grid.Row="0"/>
+            <Label Text='{Binding User.Age}'
+               Grid.Column="1"
+               Grid.Row="0"/>
+            
+            <Label Text="Recommended Water Intake:"
+               Grid.Row="1"/>
+            <Label Text='{Binding User.RecommendedWaterIntake}'
+               Grid.Column="1"
+               Grid.Row="1"/>
+
+        </Grid>
+        <Label Text="Update Information"
+            FontSize="32"
+            Grid.ColumnSpan="2"
+            Grid.Row="3"/>
+        <Grid RowDefinitions="100, Auto, 50"
+                ColumnDefinitions=".5*, .5*"
+                Padding="10"
+                RowSpacing="10"
+                ColumnSpacing="10">
+            
+            <!--<Label Text="Name:"
+                Grid.Row="0"/>
+            <Entry Placeholder="Enter Name"
+                Text="{Binding User.Name}"
+                Grid.Column="1"
+                Grid.Row="0"/>
+
+            <Label Text="Body Weight (lbs)"
+                Grid.Row="1"/>
+            <Entry Placeholder="Enter Weight"
+                Text="{Binding User.Weight}"
+                Grid.Column="1"
+                Grid.Row="1"/>-->
+
+            <Button Text="Update"
+                Command="{Binding UpdateCommand}"
+                Grid.Row="2"
+                Grid.ColumnSpan="2"/>
+
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>

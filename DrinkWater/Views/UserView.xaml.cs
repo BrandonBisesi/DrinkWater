@@ -2,9 +2,9 @@ using DrinkWater.ViewModels;
 
 namespace DrinkWater.Views;
 
-public partial class InfoView : ContentPage
+public partial class UserView : ContentPage
 {
-	public InfoView(InfoViewModel vm)
+	public UserView(UserViewModel vm)
 	{
 		InitializeComponent();
 		BindingContext = vm;

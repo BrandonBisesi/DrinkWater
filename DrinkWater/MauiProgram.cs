@@ -19,8 +19,8 @@ public static class MauiProgram
         builder.Services.AddSingleton<MainView>();
         builder.Services.AddSingleton<MainViewModel>();
 
-        builder.Services.AddSingleton<InfoView>();
-        builder.Services.AddSingleton<InfoViewModel>();
+        builder.Services.AddTransient<UserView>();
+        builder.Services.AddTransient<UserViewModel>();
         builder.Services.AddSingleton<HistoryView>();
         builder.Services.AddSingleton<HistoryViewModel>();
 
