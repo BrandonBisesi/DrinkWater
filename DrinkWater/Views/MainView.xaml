@@ -11,5 +11,12 @@
                 Command="{Binding InfoCommand}"/>
         <Button Text="History"
                 Command="{Binding HistoryCommand}"/>
+        <Button Text="Drink Water"
+                Command="{Binding WaterIntakeCommand}"/>
+
+        <ProgressBar Progress="{Binding Progress}"/>
+        <Button Text="Refresh"
+                Command="{Binding UpdateProgressCommand}"/>
+        <!--<gauge:SfCircularGauge/>-->
     </VerticalStackLayout>
 </ContentPage>

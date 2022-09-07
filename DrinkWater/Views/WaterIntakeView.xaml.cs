@@ -2,11 +2,11 @@ using DrinkWater.ViewModels;
 
 namespace DrinkWater.Views;
 
-public partial class MainView : ContentPage
+public partial class WaterIntakeView : ContentPage
 {
-	public MainView(MainViewModel vm)
+	public WaterIntakeView(WaterIntakeViewModel vm)
 	{
 		InitializeComponent();
 		BindingContext = vm;
-    }
+	}
 }

@@ -1,5 +1,6 @@
 ﻿using DrinkWater.ViewModels;
 using DrinkWater.Views;
+using CommunityToolkit.Maui;
 
 namespace DrinkWater;
 
@@ -8,7 +9,8 @@ public static class MauiProgram
 	public static MauiApp CreateMauiApp()
 	{
 		var builder = MauiApp.CreateBuilder();
-		builder
+        builder.UseMauiApp<App>().UseMauiCommunityToolkit();
+        builder
 			.UseMauiApp<App>()
 			.ConfigureFonts(fonts =>
 			{
@@ -21,8 +23,12 @@ public static class MauiProgram
 
         builder.Services.AddTransient<UserView>();
         builder.Services.AddTransient<UserViewModel>();
-        builder.Services.AddSingleton<HistoryView>();
-        builder.Services.AddSingleton<HistoryViewModel>();
+
+        builder.Services.AddTransient<WaterIntakeView>();
+        builder.Services.AddTransient<WaterIntakeViewModel>();
+
+        builder.Services.AddTransient<HistoryView>();
+        builder.Services.AddTransient<HistoryViewModel>();
 
         return builder.Build();
 	}

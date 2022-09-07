@@ -1,10 +1,11 @@
 ﻿using DrinkWater.Models;
 using SQLite;
 using System;
+using System.Collections.ObjectModel;
 
 namespace DrinkWater.Services
 {
-    public static class DrinkWaterService
+    public static class DatabaseService
     {
         static SQLiteConnection db;
         static void Init()
@@ -16,8 +17,10 @@ namespace DrinkWater.Services
             db = new SQLiteConnection(databasePath);
 
             db.CreateTable<User>();
+            db.CreateTable<WaterIntake>();
         }
 
+        #region User Functions
         public static User AddUser(string name, string weight, string age)
         {
             Init();
@@ -46,8 +49,29 @@ namespace DrinkWater.Services
         public static User GetUser()
         {
             Init();
-            var user = db.Table<User>().First();
+            var user = db.Table<User>().FirstOrDefault();
             return user;
         }
+        #endregion
+
+        #region WaterIntake Functions
+
+        public static int AddWater(int intake)
+        {
+            Init();
+            var waterIntake = new WaterIntake(intake);
+
+            db.Insert(waterIntake);
+            return waterIntake.Id;
+        }
+
+        public static IList<WaterIntake> GetWaterIntakes()
+        {
+            Init();
+            IList<WaterIntake> list = db.Table<WaterIntake>().ToList();
+            return list;
+        }
+
+        #endregion
     }
 }
