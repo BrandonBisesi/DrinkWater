@@ -6,6 +6,7 @@
              xmlns:viewmodel="clr-namespace:DrinkWater.ViewModels"
              x:DataType="viewmodel:WaterIntakeViewModel"
              Title="Drink Water">
+    
     <VerticalStackLayout>
         <Label Text="How much water did you drink? (millilitres)"/>
         <Entry Text="{Binding Amount}" Keyboard="Numeric">

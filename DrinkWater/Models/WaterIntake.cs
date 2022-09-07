@@ -12,12 +12,17 @@ namespace DrinkWater.Models
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
         public int Intake { get; set; }
-        public DateTime dateTime { get; set; }
+        public DateTime DateTime { get; set; }
+
+        public WaterIntake()
+        {
+
+        }
 
         public WaterIntake(int intake)
         {
             Intake = intake;
-            dateTime = DateTime.Now;
+            DateTime = DateTime.Now;
         }
     }
 }

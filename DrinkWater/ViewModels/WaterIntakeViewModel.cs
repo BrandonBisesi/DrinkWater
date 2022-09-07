@@ -13,7 +13,9 @@ namespace DrinkWater.ViewModels
         [RelayCommand]
         public void AddWater()
         {
-            DrinkWaterService.AddWater(Amount);
+            if(Amount > 0)
+                DatabaseService.AddWater(Amount);
+            Amount = 0;
         }
 
     }

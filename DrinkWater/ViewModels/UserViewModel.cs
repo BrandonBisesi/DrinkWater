@@ -26,13 +26,13 @@ namespace DrinkWater.ViewModels
             var name = await App.Current.MainPage.DisplayPromptAsync("Update Info", "Name");
             var weight = await App.Current.MainPage.DisplayPromptAsync("Update Info", "Weight in lbs");
             var age = await App.Current.MainPage.DisplayPromptAsync("Update Info", "Age");
-            DrinkWaterService.UpdateUser(user, name, weight, age);
+            DatabaseService.UpdateUser(user, name, weight, age);
             Refresh();
         }
 
         public User GetUser()
         {
-            return DrinkWaterService.GetUser();
+            return DatabaseService.GetUser();
         }
 
         public void Refresh()

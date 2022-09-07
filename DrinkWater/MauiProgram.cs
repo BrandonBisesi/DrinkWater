@@ -27,8 +27,8 @@ public static class MauiProgram
         builder.Services.AddTransient<WaterIntakeView>();
         builder.Services.AddTransient<WaterIntakeViewModel>();
 
-        builder.Services.AddSingleton<HistoryView>();
-        builder.Services.AddSingleton<HistoryViewModel>();
+        builder.Services.AddTransient<HistoryView>();
+        builder.Services.AddTransient<HistoryViewModel>();
 
         return builder.Build();
 	}

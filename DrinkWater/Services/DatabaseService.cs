@@ -1,10 +1,11 @@
 ﻿using DrinkWater.Models;
 using SQLite;
 using System;
+using System.Collections.ObjectModel;
 
 namespace DrinkWater.Services
 {
-    public static class DrinkWaterService
+    public static class DatabaseService
     {
         static SQLiteConnection db;
         static void Init()
@@ -62,6 +63,13 @@ namespace DrinkWater.Services
 
             db.Insert(waterIntake);
             return waterIntake.Id;
+        }
+
+        public static IList<WaterIntake> GetWaterIntakes()
+        {
+            Init();
+            IList<WaterIntake> list = db.Table<WaterIntake>().ToList();
+            return list;
         }
 
         #endregion
