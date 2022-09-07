@@ -14,13 +14,11 @@
             <ListView.ItemTemplate>
                 <DataTemplate x:DataType="model:WaterIntake">
                     <ViewCell>
-                        <Grid>
-                            <Frame Style="{StaticResource IntakeCard}">
-                                <StackLayout Orientation="Vertical">
-                                    <Label Text="{Binding DateTime, StringFormat='{0:h:mm tt}'}"/>
-                                    <Label Text="{Binding Intake, StringFormat='{0}ml'}"/>
-                                </StackLayout>
-                            </Frame>
+                        <Grid Style="{StaticResource IntakeCard}">
+                            <StackLayout Orientation="Vertical">
+                                <Label Text="{Binding DateTime, StringFormat='{0:h:mm tt}'}"/>
+                                <Label Text="{Binding Intake, StringFormat='{0}ml'}"/>
+                            </StackLayout>
                         </Grid>
                     </ViewCell>
                 </DataTemplate>

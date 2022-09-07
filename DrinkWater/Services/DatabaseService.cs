@@ -49,7 +49,7 @@ namespace DrinkWater.Services
         public static User GetUser()
         {
             Init();
-            var user = db.Table<User>().First();
+            var user = db.Table<User>().FirstOrDefault();
             return user;
         }
         #endregion

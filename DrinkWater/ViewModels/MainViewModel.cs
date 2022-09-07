@@ -1,10 +1,20 @@
 ﻿using DrinkWater.Views;
 using CommunityToolkit.Mvvm.Input;
+using CommunityToolkit.Mvvm.ComponentModel;
+using DrinkWater.Services;
 
 namespace DrinkWater.ViewModels
 {
-    public partial class MainViewModel : BindableObject
+    public partial class MainViewModel : ObservableObject
     {
+        [ObservableProperty]
+        public double progress;
+
+        public MainViewModel()
+        {
+            UpdateProgress();
+        }
+
         [RelayCommand]
         async Task Info()
         {
@@ -21,6 +31,33 @@ namespace DrinkWater.ViewModels
         async Task WaterIntake()
         {
             await Shell.Current.GoToAsync(nameof(WaterIntakeView));
+        }
+
+        [RelayCommand]
+        public void UpdateProgress()
+        {
+            var intake = DatabaseService.GetWaterIntakes()
+                            .Where(x => x.DateTime.Date == DateTime.Today.Date)
+                            .Select(x => x.Intake);
+
+            int dailyIntake = 0;
+
+            foreach (var i in intake)
+            {
+                dailyIntake += i;
+            }
+
+            var user = DatabaseService.GetUser();
+            if (user != null)
+            {
+                var recommendedIntake = user.RecommendedWaterIntake;
+
+                Progress = dailyIntake / recommendedIntake;
+            }
+            else
+            {
+                Progress = 0;
+            }
         }
 
     }

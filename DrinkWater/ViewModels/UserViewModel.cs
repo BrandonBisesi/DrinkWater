@@ -2,10 +2,6 @@
 using CommunityToolkit.Mvvm.ComponentModel;
 using DrinkWater.Models;
 using DrinkWater.Services;
-//using ReactiveUI;
-using System.ComponentModel;
-//using ReactiveUI.Fody.Helpers;
-//using MvvmHelpers;
 
 namespace DrinkWater.ViewModels
 {
